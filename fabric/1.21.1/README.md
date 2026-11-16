@@ -1,0 +1,46 @@
+<div align="center">
+
+<img src="src/main/resources/icon.png" alt="Logo de NTranslator" width="120">
+
+<h1>NTranslator</h1>
+<p>Interface de leitura para placas e livros, com narração local no Windows.</p>
+<p><strong>Minecraft 1.21.1 · Fabric · Java 21</strong></p>
+
+</div>
+
+[Instalação](#instalação) · [Uso](#uso) · [Como funciona](#como-funciona) · [Créditos](#créditos)
+
+## Instalação
+
+Coloque o JAR `build/libs/ntranslator-fabric-1211-2.0-beta.jar` na pasta `mods/` do cliente. Instale também **Fabric API** para esta versão do Minecraft e **Architectury API 13.0.8** ou versão compatível. Em multiplayer, a instalação é feita apenas na sua instância.
+
+| Minecraft | Loader | Java | Versão do mod |
+| --- | --- | --- | --- |
+| 1.21.1 | Fabric 0.15.11 | 21 | 2.0-beta |
+
+## Uso
+
+- **Placas:** clique com o botão direito em uma placa para abrir a tela de leitura. Para usar a interação normal do jogo, clique agachado ou com uma placa na mão.
+- **Livros:** abra um livro escrito ou um livro e pena. Use os controles ao lado das páginas para escolher um idioma ou acionar a leitura.
+- **Leitura em voz alta:** o botão de alto-falante usa a síntese de voz local do Windows. A voz e a saída disponíveis dependem das opções instaladas no sistema.
+
+## Como funciona
+
+| Parte | Comportamento neste build |
+| --- | --- |
+| Placas | A tela de leitura captura as linhas da face selecionada e mostra o texto original quando a tradução está indisponível. |
+| Livros | A interface adiciona controles de leitura e de idioma aos livros comuns e editáveis. As páginas originais continuam disponíveis. |
+| Idioma | A escolha do idioma é compartilhada entre placas e livros e é salva em `config/ntranslator.json`. |
+| Tradução e transcrição | O JAR atual distribui a interface de leitura e o TTS local. Nos projetos que mantêm código de LibreTranslate e transcrição, esses módulos ficam fora do build padrão de distribuição. |
+
+## Créditos
+
+Desenvolvimento e ports por [Arthou](https://github.com/arthoou). A integração com Architectury API, quando exigida por esta variante, usa a biblioteca como dependência.
+
+## Compilar
+
+```bash
+java -classpath gradle/wrapper/gradle-wrapper.jar org.gradle.wrapper.GradleWrapperMain build
+```
+
+A saída de distribuição aparece no caminho indicado em **Instalação**.

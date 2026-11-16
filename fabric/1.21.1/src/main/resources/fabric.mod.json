@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "${mod_id}",
+  "version": "${mod_version}",
+  "name": "${mod_name}",
+  "description": "${mod_description}",
+  "authors": [
+    "${mod_authors}"
+  ],
+  "license": "${mod_license}",
+  "icon": "icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "main": [
+      "com.arthou.ntranslator.fabric.NexelFabricMod"
+    ],
+    "client": [
+      "com.arthou.ntranslator.fabric.NexelFabricClient"
+    ]
+  },
+  "mixins": [
+    "ntranslator.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version_range}",
+    "architectury": ">=${architectury_version}"
+  },
+  "suggests": {}
+}
